@@ -1,0 +1,40 @@
+{
+    "name": "tip-calculator-app-main",
+    "version": "1.0.0",
+    "description": "TypeScript tip app - Challenge from Frontend Mentor",
+    "main": "./src/ts/index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "start": "webpack serve",
+        "ts": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mikolajszymczuk1/tip-calculator-app-main.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mikolajszymczuk1/tip-calculator-app-main/issues"
+    },
+    "homepage": "https://github.com/mikolajszymczuk1/tip-calculator-app-main#readme",
+    "devDependencies": {
+        "@babel/core": "^7.15.0",
+        "@babel/preset-env": "^7.15.0",
+        "@babel/preset-typescript": "^7.15.0",
+        "@vue/preload-webpack-plugin": "^2.0.0",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^6.2.0",
+        "html-loader": "^2.1.2",
+        "html-webpack-plugin": "^5.3.2",
+        "mini-css-extract-plugin": "^2.2.0",
+        "sass": "^1.38.0",
+        "sass-loader": "^12.1.0",
+        "typescript": "^4.3.5",
+        "webpack": "^5.51.1",
+        "webpack-cli": "^4.8.0",
+        "webpack-dev-server": "^4.0.0"
+    }
+}
