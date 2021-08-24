@@ -1,0 +1,215 @@
+// Utilities
+@use "../utilities/colors";
+@use "../utilities/fonts";
+
+// Style for tip calcualtor
+.tip-calculator {
+    $self: &;
+    background-color: colors.$white;
+    border-radius: 25px 25px 0 0;
+
+    // Inputs part
+    // -- Input with icon (Bill, Number of People)
+    &__input-part {
+        padding: 31px;
+    }
+
+    // &__number-input-container {}
+
+    &__group-title {
+        margin-bottom: 5px;
+
+        font-size: 1em;
+        color: colors.$lark-grayish-cyan-a;
+        font-weight: 700;
+    }
+
+    &__number-input-wrapper {
+        position: relative;
+
+        &--error-mode {
+            #{ $self }__number-input {
+                border: solid 2px colors.$error;
+            }
+
+            #{ $self }__input-error-message {
+                display: block;
+            }
+        }
+    }
+
+    &__number-input {
+        padding: 5px 15px;
+
+        width: 100%;
+
+        background-color: colors.$light-grayish-cyan-b;
+        border: none;
+        border-radius: 5px;
+        outline-color: colors.$strong-cyan;
+
+        font-size: 1.5em;
+        text-align: end;
+        font-family: fonts.$space-mono;
+        color: colors.$very-dark-cyan;
+        font-weight: 700;
+    }
+
+    &__number-input-icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+
+        transform: translateY(-50%);
+    }
+
+    &__input-error-message {
+        display: none;
+        position: absolute;
+        top: -29px;
+        right: 0;
+
+        color: colors.$error;
+        font-weight: 700;
+    }
+
+    // -- Radio inputs section (Select Tip)
+    &__radio-inputs {
+        margin: 30px 0 20px 0;
+    }
+
+    &__tips-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+
+        margin-top: 15px;
+    }
+
+    &__tip {
+        &:nth-child(even) {
+            margin: 8px 0 8px 8px;
+        }
+
+        &:nth-child(odd) {
+            margin: 8px 8px 8px 0;
+        }
+    }
+
+    &__radio-input {
+        display: none;
+
+        &:checked ~ #{ $self }__custom-radio {
+            background-color: colors.$strong-cyan;
+
+            color: colors.$very-dark-cyan;
+        }
+    }
+
+    &__custom-radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 50px;
+
+        background-color: colors.$very-dark-cyan;
+        border-radius: 5px;
+        transition: background-color 150ms ease-out,
+                    color 150ms ease-out;
+
+        color: colors.$white;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    &__custom-tip {
+        margin: 8px 0 8px 8px;
+
+        height: 50px;
+
+        border: none;
+        background-color: colors.$light-grayish-cyan-b;
+        border-radius: 5px;
+        outline-color: colors.$strong-cyan;
+
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        color: colors.$very-dark-cyan;
+
+        &::placeholder {
+            color: colors.$lark-grayish-cyan-a;
+            font-family: fonts.$space-mono;
+        }
+    }
+
+    // Output part
+    &__output {
+        padding: 0 25px 31px 25px;
+    }
+
+    &__output-content {
+        padding: 30px 25px 25px 25px;
+
+        background-color: colors.$very-dark-cyan;
+        border-radius: 15px;
+    }
+
+    &__single-output {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 20px;
+
+        &:nth-child(2) {
+            margin-bottom: 35px;
+        }
+    }
+
+    // &__output-text-wrapper {}
+
+    &__single-output-title {
+        font-size: 1em;
+        color: colors.$white;
+    }
+
+    &__single-output-under-title {
+        font-size: 0.8em;
+        color: colors.$lark-grayish-cyan-b;
+    }
+
+    &__output-result {
+        color: colors.$strong-cyan;
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    &__reset-button {
+        padding: 10px 0;
+
+        width: 100%;
+
+        background-color: colors.$strong-cyan;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 150ms ease-out;
+        cursor: pointer;
+
+        font-family: fonts.$space-mono;
+        font-weight: 700;
+        color: colors.$very-dark-cyan;
+        font-size: 1.2em;
+
+        &:hover {
+            background-color: colors.$hover;
+        }
+
+        &--disable {
+            opacity: 0.2;
+        }
+    }
+}

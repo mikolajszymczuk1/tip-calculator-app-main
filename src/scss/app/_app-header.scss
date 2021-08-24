@@ -1,0 +1,16 @@
+// Utilities
+@use "../utilities/colors";
+@use "../utilities/fonts";
+
+// Styles for header
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 0;
+
+    &__logo {
+
+    }
+}
