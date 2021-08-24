@@ -5,8 +5,11 @@ $strong-cyan: hsl(172, 67%, 45%);
 
 // Neutral
 $very-dark-cyan: hsl(183, 100%, 15%);
-$lark-grayish-cyan: hsl(186, 14%, 43%);
-$lark-grayish-cyan: hsl(184, 14%, 56%);
+$lark-grayish-cyan-a: hsl(186, 14%, 43%);
+$lark-grayish-cyan-b: hsl(184, 14%, 56%);
 $light-grayish-cyan-a: hsl(185, 41%, 84%);
 $light-grayish-cyan-b: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
+
+// Error
+$error: hsl(4, 83%, 60%);
