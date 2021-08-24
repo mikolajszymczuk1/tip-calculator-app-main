@@ -1,5 +1,8 @@
-// Base styles for project
+// Utilities
+@use "./colors";
+@use "./fonts";
 
+// Base styles for project
 *,
 *::before,
 *::after {
@@ -7,4 +10,10 @@
     padding: 0;
 
     box-sizing: border-box;
+}
+
+body {
+    background-color: colors.$light-grayish-cyan-a;
+
+    font-family: fonts.$space-mono;
 }
