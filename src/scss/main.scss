@@ -1,2 +1,6 @@
 // Base styles
 @use "./utilities/base";
+
+// App
+@use "./app/app-header";
+@use "./app/tip-calculator";
