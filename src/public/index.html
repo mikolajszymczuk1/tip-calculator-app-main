@@ -21,7 +21,102 @@
 </head>
 
 <body>
-    <h1>Hello World !!!</h1>
+    <!-- ====== Header ====== -->
+    <header class="app-header">
+        <img class="app-header__logo" src="/src/svg/logo.svg" alt="App logo image" title="App logo">
+    </header>
+    <!-- END Header -->
+
+    <!-- ====== Main ====== -->
+    <main class="tip-calculator">
+        <!-- Container with all user inputs -->
+        <section class="tip-calculator__input-part" aria-label="app-input-part">
+            <!-- Bill -->
+            <div class="tip-calcualtor__number-input-container">
+                <h3 class="tip-calculator__group-title">Bill</h3>
+                
+                <div class="tip-calculator__number-input-wrapper">
+                    <input class="tip-calculator__number-input" type="number" name="bill" min="0" value="0">
+                    <img class="tip-calculator__number-input-icon" src="/src/svg/icon-dollar.svg" alt="Dollar icon image" title="Dollar icon">
+                </div>
+            </div>
+
+            <!-- Select tip -->
+            <div class="tip-calculator__radio-inputs">
+                <h3 class="tip-calculator__group-title">Select Tip %</h3>
+
+                <div class="tip-calculator__tips-container">
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <span class="tip-calculator__custom-radio">5%</span>
+                    </label>
+
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <span class="tip-calculator__custom-radio">10%</span>
+                    </label>
+
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <span class="tip-calculator__custom-radio">15%</span>
+                    </label>
+
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <span class="tip-calculator__custom-radio">25%</span>
+                    </label>
+
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <span class="tip-calculator__custom-radio">50%</span>
+                    </label>
+
+                    <input class="tip-calculator__custom-tip" type="number" name="custom-tip" min="0" placeholder="Custom">
+                </div>
+            </div>
+
+            <!-- Number of people -->
+            <div class="tip-calcualtor__number-input-container">
+                <h3 class="tip-calculator__group-title">Number of People</h3>
+                
+                <div class="tip-calculator__number-input-wrapper">
+                    <input class="tip-calculator__number-input" type="number" name="bill" min="0" value="0">
+                    <img class="tip-calculator__number-input-icon" src="/src/svg/icon-person.svg" alt="Person icon image" title="Person icon">
+                    <p class="tip-calculator__input-error-message">Can't be zero</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Container with output -->
+        <section class="tip-calculator__output" aria-label="app-output">
+            <!-- All output content -->
+            <div class="tip-calculator__output-content">
+                <!-- Tip Amount output -->
+                <div class="tip-calculator__single-output">
+                    <div class="tip-calculator__output-text-wrapper">
+                        <h3 class="tip-calculator__single-output-title">Tip Amount</h3>
+                        <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                    </div>
+
+                    <div id="tip-amount" class="tip-calculator__output-result">$0.00</div>
+                </div>
+
+                <!-- Total output -->
+                <div class="tip-calculator__single-output">
+                    <div class="tip-calculator__output-text-wrapper">
+                        <h3 class="tip-calculator__single-output-title">Total</h3>
+                        <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                    </div>
+
+                    <div id="total" class="tip-calculator__output-result">$0.00</div>
+                </div>
+
+                <!-- Reset button -->
+                <button class="tip-calculator__reset-button">RESET</button>
+            </div>
+        </section>
+    </main>
+    <!-- ====== END Main ====== -->
 </body>
 
 </html>
