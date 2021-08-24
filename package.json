@@ -5,7 +5,7 @@
     "main": "./src/ts/index.ts",
     "scripts": {
         "test": "jest",
-        "build": "webpack",
+        "build": "webpack --env production",
         "start": "webpack serve",
         "ts": "tsc"
     },
