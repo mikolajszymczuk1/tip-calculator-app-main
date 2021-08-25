@@ -71,7 +71,9 @@
                         <span class="tip-calculator__custom-radio">50%</span>
                     </label>
 
-                    <input class="tip-calculator__custom-tip" type="number" name="custom-tip" min="0" placeholder="Custom">
+                    <label class="tip-calculator__tip">
+                        <input class="tip-calculator__custom-tip" type="number" name="custom-tip" min="0" placeholder="Custom">
+                    </label>
                 </div>
             </div>
 
@@ -91,24 +93,26 @@
         <section class="tip-calculator__output" aria-label="app-output">
             <!-- All output content -->
             <div class="tip-calculator__output-content">
-                <!-- Tip Amount output -->
-                <div class="tip-calculator__single-output">
-                    <div class="tip-calculator__output-text-wrapper">
-                        <h3 class="tip-calculator__single-output-title">Tip Amount</h3>
-                        <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                <div class="tip-calculator__outputs-wrapper">
+                    <!-- Tip Amount output -->
+                    <div class="tip-calculator__single-output">
+                        <div class="tip-calculator__output-text-wrapper">
+                            <h3 class="tip-calculator__single-output-title">Tip Amount</h3>
+                            <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                        </div>
+
+                        <div id="tip-amount" class="tip-calculator__output-result">$0.00</div>
                     </div>
 
-                    <div id="tip-amount" class="tip-calculator__output-result">$0.00</div>
-                </div>
+                    <!-- Total output -->
+                    <div class="tip-calculator__single-output">
+                        <div class="tip-calculator__output-text-wrapper">
+                            <h3 class="tip-calculator__single-output-title">Total</h3>
+                            <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                        </div>
 
-                <!-- Total output -->
-                <div class="tip-calculator__single-output">
-                    <div class="tip-calculator__output-text-wrapper">
-                        <h3 class="tip-calculator__single-output-title">Total</h3>
-                        <h4 class="tip-calculator__single-output-under-title">/ person</h4>
+                        <div id="total" class="tip-calculator__output-result">$0.00</div>
                     </div>
-
-                    <div id="total" class="tip-calculator__output-result">$0.00</div>
                 </div>
 
                 <!-- Reset button -->
