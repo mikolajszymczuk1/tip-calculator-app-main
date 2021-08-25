@@ -36,7 +36,10 @@
                 <h3 class="tip-calculator__group-title">Bill</h3>
                 
                 <div class="tip-calculator__number-input-wrapper">
-                    <label class="tip-calculator__number-input-label"><input class="tip-calculator__number-input" type="number" name="bill" min="0" value="0"></label>
+                    <label class="tip-calculator__number-input-label">
+                        <input id="bill" class="tip-calculator__number-input" type="number" name="bill" min="0" placeholder="0">
+                    </label>
+
                     <img class="tip-calculator__number-input-icon" src="/src/svg/icon-dollar.svg" alt="Dollar icon image" title="Dollar icon">
                 </div>
             </div>
@@ -47,32 +50,32 @@
 
                 <div class="tip-calculator__tips-container">
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip" value="5">
                         <span class="tip-calculator__custom-radio">5%</span>
                     </label>
 
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip" value="10">
                         <span class="tip-calculator__custom-radio">10%</span>
                     </label>
 
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip" value="15">
                         <span class="tip-calculator__custom-radio">15%</span>
                     </label>
 
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip" value="25">
                         <span class="tip-calculator__custom-radio">25%</span>
                     </label>
 
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__radio-input" type="radio" name="tip">
+                        <input class="tip-calculator__radio-input" type="radio" name="tip" value="50">
                         <span class="tip-calculator__custom-radio">50%</span>
                     </label>
 
                     <label class="tip-calculator__tip">
-                        <input class="tip-calculator__custom-tip" type="number" name="custom-tip" min="0" placeholder="Custom">
+                        <input id="custom-tip" class="tip-calculator__custom-tip" type="number" name="custom-tip" min="0" placeholder="Custom">
                     </label>
                 </div>
             </div>
@@ -82,7 +85,10 @@
                 <h3 class="tip-calculator__group-title">Number of People</h3>
                 
                 <div class="tip-calculator__number-input-wrapper">
-                    <label class="tip-calculator__number-input-label"><input class="tip-calculator__number-input" type="number" name="bill" min="0" value="0"></label>
+                    <label class="tip-calculator__number-input-label">
+                        <input id="number-of-people" class="tip-calculator__number-input" type="number" name="number-of-people" min="0" placeholder="0">
+                    </label>
+
                     <img class="tip-calculator__number-input-icon" src="/src/svg/icon-person.svg" alt="Person icon image" title="Person icon">
                     <p class="tip-calculator__input-error-message">Can't be zero</p>
                 </div>
