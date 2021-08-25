@@ -86,6 +86,10 @@
         font: 700 1.5em fonts.$space-mono;
         text-align: end;
         color: colors.$very-dark-cyan;
+
+        &::placeholder {
+            color: colors.$lark-grayish-cyan-b;
+        }
     }
 
     &__number-input-icon {
@@ -99,11 +103,16 @@
     &__input-error-message {
         display: none;
         position: absolute;
-        top: -29px;
+        bottom: -29px;
         right: 0;
 
         color: colors.$error;
         font-weight: 700;
+
+        @media screen and (min-width: 375px) {
+            top: -29px;
+            bottom: unset;
+        }
     }
 
     // -- Radio inputs section (Select Tip)
