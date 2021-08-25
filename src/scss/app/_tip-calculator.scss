@@ -8,10 +8,43 @@
     background-color: colors.$white;
     border-radius: 25px 25px 0 0;
 
+    @media screen and (min-width: 550px) {
+        margin: 0 auto 70px auto;
+
+        width: 70%;
+
+        border-radius: 25px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 60%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+
+        width: 80%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        // width: 920px;
+        width: 64%;
+    }
+
+    @media screen and (min-width: 1920px) {
+        width: 50%;
+    }
+
     // Inputs part
     // -- Input with icon (Bill, Number of People)
     &__input-part {
         padding: 31px;
+
+        @media screen and (min-width: 1024px) {
+            flex-basis: 50%;
+
+            padding: 45px 30px 45px 45px;
+        }
     }
 
     // &__number-input-container {}
@@ -48,11 +81,9 @@
         border-radius: 5px;
         outline-color: colors.$strong-cyan;
 
-        font-size: 1.5em;
+        font: 700 1.5em fonts.$space-mono;
         text-align: end;
-        font-family: fonts.$space-mono;
         color: colors.$very-dark-cyan;
-        font-weight: 700;
     }
 
     &__number-input-icon {
@@ -76,6 +107,10 @@
     // -- Radio inputs section (Select Tip)
     &__radio-inputs {
         margin: 30px 0 20px 0;
+
+        @media screen and (min-width: 1024px) {
+            margin: 40px 0 25px 0;
+        }
     }
 
     &__tips-container {
@@ -83,17 +118,39 @@
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(3, 1fr);
         justify-content: center;
+        align-items: center;
 
         margin-top: 15px;
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-rows: repeat(2, 1fr);
+        }
     }
 
     &__tip {
+        height: 50px;
+
+        @media screen and (min-width: 1024px) {
+            margin: 0 8px 16px 8px !important;
+
+            &:nth-child(1),
+            &:nth-child(4) {
+                margin-left: 0 !important;
+            }
+
+            &:nth-child(3),
+            &:nth-child(6) {
+                margin-right: 0 !important;
+            }
+        }
+
         &:nth-child(even) {
-            margin: 8px 0 8px 8px;
+            margin: 0 0 16px 8px;
         }
 
         &:nth-child(odd) {
-            margin: 8px 8px 8px 0;
+            margin: 0 8px 16px 0;
         }
     }
 
@@ -112,7 +169,7 @@
         justify-content: center;
         align-items: center;
 
-        height: 50px;
+        height: 100%;
 
         background-color: colors.$very-dark-cyan;
         border-radius: 5px;
@@ -125,9 +182,8 @@
     }
 
     &__custom-tip {
-        margin: 8px 0 8px 8px;
-
-        height: 50px;
+        width: 100%;
+        height: 100%;
 
         border: none;
         background-color: colors.$light-grayish-cyan-b;
@@ -139,6 +195,10 @@
         font-weight: 700;
         color: colors.$very-dark-cyan;
 
+        @media screen and (min-width: 1024px) {
+            text-align: end;
+        }
+
         &::placeholder {
             color: colors.$lark-grayish-cyan-a;
             font-family: fonts.$space-mono;
@@ -147,15 +207,35 @@
 
     // Output part
     &__output {
+        flex-basis: 50%;
+
         padding: 0 25px 31px 25px;
+
+        @media screen and (min-width: 1024px) {
+            flex-basis: 50%;
+
+            padding: 30px 33px 30px 15px;
+        }
     }
 
     &__output-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
         padding: 30px 25px 25px 25px;
+
+        height: 100%;
 
         background-color: colors.$very-dark-cyan;
         border-radius: 15px;
+
+        @media screen and (min-width: 1024px) {
+            padding: 50px 40px 35px 40px;
+        }
     }
+
+    // &__outputs-wrapper {}
 
     &__single-output {
         display: flex;
@@ -166,6 +246,10 @@
 
         &:nth-child(2) {
             margin-bottom: 35px;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -182,9 +266,22 @@
     }
 
     &__output-result {
+        width: 150px;
+
+        overflow-x: auto;
+
         color: colors.$strong-cyan;
         font-weight: 700;
         font-size: 2em;
+        text-align: end;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 3em;
+        }
+
+        @media screen and (min-width: 1440px) {
+            width: 200px;
+        }
     }
 
     &__reset-button {
@@ -199,10 +296,8 @@
         transition: background-color 150ms ease-out;
         cursor: pointer;
 
-        font-family: fonts.$space-mono;
-        font-weight: 700;
+        font: 700 1.2em fonts.$space-mono;
         color: colors.$very-dark-cyan;
-        font-size: 1.2em;
 
         &:hover {
             background-color: colors.$hover;
