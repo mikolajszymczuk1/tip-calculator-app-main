@@ -35,6 +35,9 @@ const totalOutput: HTMLDivElement = document.getElementById("total") as HTMLDivE
 inputSection.addEventListener("input", mainController);
 resetButton.addEventListener("click", resetInputs);
 
+// Disable reset button when program start
+disableResetButton();
+
 /** Main app function */
 function mainController(): void {
     // Get inputs values
@@ -56,8 +59,7 @@ function mainController(): void {
     let numberOfPeopleInputWrapper: HTMLElement = numberOfPeopleInput.parentNode?.parentNode as HTMLElement;
     if (numberOfPeopleValue === 0) {
         addRemoveElementClassName(numberOfPeopleInputWrapper, "tip-calculator__number-input-wrapper--error-mode", true);
-        addRemoveElementClassName(resetButton, "tip-calculator__reset-button--disable", true);
-        resetButton.disabled = true;
+        disableResetButton();
     } else {
         addRemoveElementClassName(numberOfPeopleInputWrapper, "tip-calculator__number-input-wrapper--error-mode", false);
         addRemoveElementClassName(resetButton, "tip-calculator__reset-button--disable", false);
@@ -77,4 +79,11 @@ function resetInputs(): void {
     tipAmountOutput.innerHTML = "$0.00";
     totalOutput.innerHTML = "$0.00";
     resetRadioInputs(radioInputs);
+    disableResetButton();
+}
+
+/** Helper function to disable reset button */
+function disableResetButton(): void {
+    addRemoveElementClassName(resetButton, "tip-calculator__reset-button--disable", true);
+    resetButton.disabled = true;
 }
