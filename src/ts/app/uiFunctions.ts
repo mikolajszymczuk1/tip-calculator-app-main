@@ -2,20 +2,12 @@
 
 /** Function to activate or deactivate element (Add or remove active class) */
 function addRemoveElementClassName(el: HTMLElement, className: string, onOff: boolean): void {
-    if (onOff) {
-        el.classList.add(className);
-    } else {
-        el.classList.remove(className);
-    }
+    onOff ? el.classList.add(className) : el.classList.remove(className);
 }
 
 /** Return value from number input */
 function getNumberInputValue(el: HTMLInputElement): number {
-    if (el.value === "") {
-        return 0;
-    }
-
-    return parseFloat(el.value);
+    return el.value === "" ? 0 : parseFloat(el.value);
 }
 
 /** Return radio input value */
@@ -40,11 +32,7 @@ function resetRadioInputs(elementsArray: NodeListOf<HTMLInputElement>): void {
 
 /** */
 function setOutputValue(outputEl: HTMLElement, newValue: number): void {
-    if (newValue === 0) {
-        outputEl.innerHTML = "$0.00";
-    } else {
-        outputEl.innerHTML = "$" + newValue.toString();
-    }
+    newValue === 0 ? outputEl.innerHTML = "$0.00" : outputEl.innerHTML = "$" + newValue.toString();
 }
 
 export { 

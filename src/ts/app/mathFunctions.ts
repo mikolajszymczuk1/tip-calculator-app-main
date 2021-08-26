@@ -2,11 +2,7 @@
 
 /** Function returns cost per person */
 function perPerson(bill: number, numOfPeople: number): number {
-    if (numOfPeople === 0) {
-        return 0;
-    }
-    
-    return bill / numOfPeople;
+    return numOfPeople === 0 ? 0 : (bill / numOfPeople);
 }
 
 /** Function returns a percentage of cost value */
