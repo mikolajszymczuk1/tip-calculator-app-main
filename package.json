@@ -16,7 +16,9 @@
     "jest": {
         "transform": {
             "^.+\\.[t|j]sx?$": "babel-jest"
-        }
+        },
+        "verbose": true,
+        "testEnvironment": "jsdom"
     },
     "keywords": [],
     "author": "",
@@ -29,6 +31,7 @@
         "@babel/core": "^7.15.0",
         "@babel/preset-env": "^7.15.0",
         "@babel/preset-typescript": "^7.15.0",
+        "@testing-library/jest-dom": "^5.14.1",
         "@types/jest": "^27.0.1",
         "@vue/preload-webpack-plugin": "^2.0.0",
         "babel-jest": "^27.0.6",
