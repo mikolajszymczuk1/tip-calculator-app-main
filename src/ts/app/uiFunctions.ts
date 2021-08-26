@@ -41,7 +41,7 @@ function resetRadioInputs(elementsArray: NodeListOf<HTMLInputElement>): void {
 /** */
 function setOutputValue(outputEl: HTMLElement, newValue: number): void {
     if (newValue === 0) {
-        outputEl.innerHTML = "%0.00";
+        outputEl.innerHTML = "$0.00";
     } else {
         outputEl.innerHTML = "$" + newValue.toString();
     }
