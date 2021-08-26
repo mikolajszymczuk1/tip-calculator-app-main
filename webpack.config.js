@@ -29,15 +29,27 @@ module.exports = (env) => {
                             presets: [
                                 "@babel/preset-env",
                                 "@babel/preset-typescript"
-                            ]
-                        }
+                            ],
+                        },
                     },
                 },
-                {   // Sass
+                {   // Styles
                     test: /\.s[ac]ss$/i,
                     use: [
                         MiniCssExtractPlugin.loader,
                         "css-loader",
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                postcssOptions: {
+                                    plugins: [
+                                        [
+                                            "postcss-preset-env",
+                                        ],
+                                    ],
+                                },
+                            },
+                        },
                         {
                             loader: "sass-loader",
                             options: {
@@ -45,10 +57,10 @@ module.exports = (env) => {
                                 sourceMap: true,
                                 sassOptions: {
                                     outputStyle: "compressed",
-                                }
-                            }
-                        }
-                    ]
+                                },
+                            },
+                        },
+                    ],
                 },
                 {   // Images
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
